@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Mở ứng dụng Android</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
+    .app-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    .play-button img {
+      width: 220px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .play-button img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      // thử mở app bằng scheme
+      window.location = "{{{scheme}}}";
+      // sau 1.5 giây nếu chưa mở thì fallback Play Store
+      setTimeout(function() {
+        window.location = "{{{store}}}";
+      }, 1500);
+    }
+  </script>
+</head>
+<body>
+  <img src="https://play-lh.googleusercontent.com/z6VjxGFTBP37V8XV8ssWlrQ8iQH3bjjQfbMersiC-SzeZ9qD8HMQKQknUzeqcRyAmHQk=w480-h960-rw" alt="Logo Ứng dụng" class="app-logo">
+
+  <h2>Đang mở ứng dụng Android...</h2>
+  <p>Nếu không tự động mở, bạn có thể:</p>
+ 
+  <div class="play-button">
+    <a href="{{{store}}}">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="Tải ứng dụng trên Google Play">
+    </a>
+  </div>
+</body>
+</html>

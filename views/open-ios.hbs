@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Mở ứng dụng Android</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+    .app-logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .app-name {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .open-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      background-color: #34a853; /* xanh Android */
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      transition: background-color 0.2s ease;
+    }
+    .open-btn:hover {
+      background-color: #0c7c32;
+    }
+    .store-btn img {
+      margin-top: 20px;
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .store-btn img:hover {
+      transform: scale(1.05);
+    }
+    p {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+
+  <script>
+    window.onload = function() {
+      window.location = "{{{scheme}}}";
+      setTimeout(function() {
+        window.location = "{{{store}}}";
+      }, 1500);
+    }
+  </script>
+</head>
+<body>
+  <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/69/58/77/695877c9-d119-ef3a-baee-7f1843e50de0/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/492x0w.webp" alt="App Logo" class="app-logo" />
+
+  <div class="app-name">Castto: TV Cast, Screen Share</div>
+
+
+  <div class="store-btn">
+    <a href="{{{store}}}">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png" alt="Tải ứng dụng trên Google Play">
+    </a>
+  </div>
+
+  <p>Nếu không tự động mở, hãy bấm nút trên hoặc tải ứng dụng từ Google Play.</p>
+</body>
+</html>
